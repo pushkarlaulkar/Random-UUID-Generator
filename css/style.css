@@ -1,0 +1,96 @@
+/* General Styling */
+html, body{
+	color: #fafafa;
+    background: -webkit-linear-gradient(50deg, HSLA(205, 45%, 44%, 1), #7b2736);
+	background: -moz-linear-gradient(50deg, HSLA(205, 45%, 44%, 1), #7b2736);
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  height: 90vh;
+}
+/* container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 5%;
+}
+
+/* Font Styling */
+.cursive {
+  font-style: oblique;
+}
+h1 {
+  color: whitesmoke;
+  text-align: center;
+  margin-top: 10%;
+}
+strike {
+  color: royalblue;
+}
+.text_input {
+  text-align: center;
+}
+input[type='text']{
+	font-size: 15px;
+	border-radius: 5px;
+	}
+/* Input Text Styling */
+input {
+  height: 50px;
+  width: 300px;
+  border: none;
+}
+
+input:focus {
+  border: 1px solid royalblue;
+}
+/* button styling */
+.btn {
+  background-color: royalblue;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 1px 7px;
+  height: 50px;
+  width: 70px;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+button img {
+  height: 20px;
+  width: 20px;
+}
+
+/* Paste Input text */
+.paste {
+  text-align: center;
+  margin-top: 5%;
+}
+.paste input {
+  height: 200px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.footer-heart{text-align:center;font-family: open sans, sans-serif;}
+
+.footer-heart a{border-bottom: 1px solid yellow;color: yellow;padding-bottom: .25em; text-decoration: none;}
+
+.footer-heart a:hover{color:#2196f3; background-image: url("data:image/svg+xml;charset=utf8,%3Csvg id='squiggle-link' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:ev='http://www.w3.org/2001/xml-events' viewBox='0 0 20 4'%3E%3Cstyle type='text/css'%3E.squiggle{animation:shift .3s linear infinite;}@keyframes shift {from {transform:translateX(0);}to {transform:translateX(-20px);}}%3C/style%3E%3Cpath fill='none' stroke='%23453886' stroke-width='2' class='squiggle' d='M0,3.5 c 5,0,5,-3,10,-3 s 5,3,10,3 c 5,0,5,-3,10,-3 s 5,3,10,3'/%3E%3C/svg%3E");
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 20%;
+  border-bottom: 0;
+  padding-bottom: .3em;
+  text-decoration: none;}
+
+.emoji{vertical-align: middle;}

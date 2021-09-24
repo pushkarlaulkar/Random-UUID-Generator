@@ -1,0 +1,74 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random UUID Generator</title>
+    <link rel="stylesheet" href="./css/style.css">
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script>
+		function random_uuid_onload(){
+			$.ajax({
+				url : 'http://httpbin.org/uuid',
+				type: 'GET',
+				dataType: 'json',
+				success: function(data) {
+					document.getElementById("text_input").value = data['uuid'];
+				}			
+			});
+		}
+		$(document).ready(function(){
+			$("#random").click(function(){
+				document.getElementById("random").innerHTML = '<i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i>'
+				$.ajax({ 
+					url: 'http://httpbin.org/uuid',
+					type: 'GET', 
+					dataType: 'json',
+					success: function(data) {
+						document.getElementById("text_input").value = data['uuid'];
+						document.getElementById("random").innerHTML = '<img src="./img/iconmonstr-refresh-1.svg" />'
+					}
+				});
+			});
+		});
+		function myFunction() {
+		  /* Get the text field */
+		  var copyText = document.getElementById("text_input");
+		  var copybutton = document.getElementById("copypaste");
+
+		  /* Select the text field */
+		  copyText.select();
+		  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+		  /* Copy the text inside the text field */
+		  document.execCommand("copy");
+		}
+	</script>
+  </head>
+  <body onload="random_uuid_onload();">
+    <h1 class="cursive">
+      Random UUID Generator
+    </h1>
+    <div class="container">
+      <!-- Target -->
+      <input id="text_input" class="text_input" type="text" value="" readonly/>
+
+      <!-- Trigger -->
+	  <button class="btn" id="random" type="button">
+        <img src="./img/iconmonstr-refresh-1.svg" />
+      </button>
+      <button class="btn" id="copypaste" type="button" onclick="myFunction()">
+        <img src="./img/clipboard-outline.svg" />
+      </button>
+	  
+    </div>
+	<div class="container">
+	  <p class="footer-heart">
+  Made with <g-emoji class="g-emoji" alias="heart" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png">
+<img class="emoji" alt="heart" height="20" width="20" src="./img/heart.png"></g-emoji> by <a href="https://www.linkedin.com/in/pushkar-laulkar/" target="_blank">Pushkar Laulkar</a>
+</p>
+    </div>
+    <!-- Input Field For Test -->
+	
+  </body>
+</html>
